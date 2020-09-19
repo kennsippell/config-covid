@@ -14,4 +14,4 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - run: $(cd ebs_with_tracing && npm ci && npx medic-conf --local)
+    - run: cd ebs_with_tracing && npm ci && npx medic-conf --local
