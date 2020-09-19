@@ -1,0 +1,17 @@
+name: Deploy configurations via medic-conf
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - run: $(cd ebs_with_tracing && npm ci && npx medic-conf --local)
