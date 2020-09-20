@@ -1,15 +1,21 @@
-name: 'Deploy Configuration'
-description: 'Uses medic-conf to deploy a CHT configuration'
+name: 'Deploy with medic-conf'
 inputs:
   directory:
+    description: The path to the directory containing the configuration to be deployed.
     required: true
     default: '.'
+  
   hostname:
+    description: The hostname of the instance to receive the configuration.
     required: true
+
   username:
+    description: An administrator username. The user making the deployment.
     required: true
     default: 'medic'
+
   password:
+    dsecription: The password for inputs.username.
     required: true
 runs:
   using: 'composite'

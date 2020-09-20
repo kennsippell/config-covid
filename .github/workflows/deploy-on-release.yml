@@ -8,10 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
 
-    strategy:
-      matrix:
-        directory: ['./ebs_with_tracing']
-
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
@@ -19,7 +15,7 @@ jobs:
         node-version: 10.x
     - uses: './.github/actions/deploy-with-medic-conf'
       with:
-        directory: ${{ matrix.directory }}
+        directory: './ebs_with_tracing'
         hostname: 031c0c650801.ngrok.io
         username: admin
         password: pass
