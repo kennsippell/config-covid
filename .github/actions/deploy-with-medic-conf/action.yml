@@ -12,6 +12,7 @@ inputs:
   password:
     required: true
 runs:
+  using: 'composite'
   steps:
   - run: |
         npm ci
