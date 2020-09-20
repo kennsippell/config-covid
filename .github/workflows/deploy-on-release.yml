@@ -17,7 +17,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - uses: 'actions/deploy-with-medic-conf'
+    - uses: './actions/deploy-with-medic-conf'
       with:
         directory: ${{ matrix.directory }}
         hostname: 031c0c650801.ngrok.io
