@@ -12,7 +12,6 @@ inputs:
   password:
     required: true
 runs:
-  using: 'ubuntu-latest'
   steps:
   - run: |
         npm ci
