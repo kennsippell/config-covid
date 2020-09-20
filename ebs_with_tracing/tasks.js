@@ -7,7 +7,7 @@ module.exports = [
 
   // 1. Positive Rdt follow-up
   {
-    name: 'covid-rdt-followup',
+    name: 'covid-rdt-followup-35',
     icon: 'icon-healthcare',
     title: 'task.covid_followup.title',
     appliesTo: 'contacts',
