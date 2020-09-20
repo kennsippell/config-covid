@@ -6,7 +6,7 @@
 
 const getField = (report, fieldPath) => ['fields', ...(fieldPath || '').split('.')]
   .reduce((prev, fieldName) => {
-    if (prev === undefined) { return undefined; }
+    if (prev === undefined) { return false; }
     return prev[fieldName];
   }, report);
 
